@@ -1,10 +1,10 @@
 // config/database.js
 module.exports = {
     'connection': {
-        'host': 'localhost', // localde iseniz bu , local değilse ip adresini yazınız .
-        'user': 'root', // kullanıcı adı 
-        'password': '123456', // şifreniz 
-        'database': 'node_login'// database ismi .
+        'host': 'localhost', //host 
+        'user': 'root', // database username
+        'password': '123456', // database password
+        'database': 'node_login'//database name
     },
 	'database': 'node_login',
     

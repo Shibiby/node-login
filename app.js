@@ -28,7 +28,7 @@ app.set('view engine', 'ejs'); // set up ejs for templating
 
 // required for passport
 app.use(session({
-    secret: 'kodizimcomisrunning',
+    secret: 'mysecret',
     resave: true,
     saveUninitialized: true
  } )); // session secret
@@ -42,4 +42,4 @@ require('./app/routes.js')(app, passport); // load our routes and pass in our ap
 
 // launch ======================================================================
 app.listen(port);
-console.log('kodizimcomisrunning  localhost: ' + port);
+console.log('Server is running on localhost: ' + port);
