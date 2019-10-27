@@ -1,54 +1,63 @@
-
-<!Doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta name="keyword" content="HTML, CSS, JAVASCRİPT">
-    <meta name="author" content="">
 	<title>NODEJS AUTHENTICATION</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-
 	<style>
-		body 		{ padding-top:80px; }
+		body { padding-top:80px;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+        }
+        #btn{
+            border-radius: 0px;
+        }
+        #signup{
+            background-color: #0066ff;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            
+        }
 	</style>
 </head>
 <body>
-<div class="container">
+    
+    <div class="container">
 
-<div class="col-sm-6 col-sm-offset-3">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <% if (message.length > 0) { %>
+                    <div class="alert alert-danger"><%= message %></div>
+                <% } %>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 text-center" id="signup">
+                <h1>Register</h1>
+                <hr style="width: 50%;">
+                <form action="/signup" method="post">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" placeholder="Username"  name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" placeholder="Password"  name="password">
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-lg" id="btn">Register</button>
 
-	<h1><span class="fa fa-sign-in"></span> Register</h1>
+                </form>
 
-	<!-- show any messages that come back with authentication -->
-	<% if (message.length > 0) { %>
-		<div class="alert alert-danger"><%= message %></div>
-	<% } %>
+                <hr style="width: 50%;">
 
-	<!-- LOGIN FORM -->
-	<form action="/signup" method="post">
-		<div class="form-group">
-		
-			<input type="text" class="form-control" placeholder="Username"  name="username">
-		</div>
-		<div class="form-group">
-		
-			<input type="password" class="form-control" placeholder="Password"	 name="password">
-		</div>
-
-		<button type="submit" class="btn btn-warning btn-lg">Save</button>
-	</form>
-
-	<hr>
-
-	<p>Already have user  <a href="/login">login</a></p>
-	<p><a href="/">Home Page</a>.</p>
-
-</div>
-
-</div>
+            <p><i>Already A User?</i> <a href="/login" style="color: black;"><b>LOGIN</b></a></p>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
 
 <!-- scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -56,3 +65,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
