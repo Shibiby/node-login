@@ -4,8 +4,27 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./app",
+    "dev": "nodemon ./app"
   },
   "author": "Muhammad Feisal",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "*",
+    "body-parser": "*",
+    "express": "*",
+    "mysql": "*",
+    "socket.io": "*",
+    "express-session": "*",
+    "cookie-parser": "*",
+    "morgan": "*",
+    "passport": "*",
+    "connect-flash": "*",
+    "passport-local": "*",
+    "bcrypt-nodejs": "*",
+    "json-socket": "*"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
 }
